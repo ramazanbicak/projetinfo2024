@@ -36,7 +36,7 @@ public class DevisBatiment {
         
         c.afficher();
         //bonjour
-        
+        //apnian
     }
 }
 
