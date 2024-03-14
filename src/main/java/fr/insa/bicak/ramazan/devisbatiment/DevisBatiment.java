@@ -35,7 +35,7 @@ public class DevisBatiment {
         c = new Coin(id, abscisse, ordonnee);
         
         c.afficher();
-        //testttttt
+        //bonjour
     }
 }
 
