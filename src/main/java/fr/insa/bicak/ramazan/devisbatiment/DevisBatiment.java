@@ -36,6 +36,7 @@ public class DevisBatiment {
         
         c.afficher();
         //bonjour
+        // olala je vais me rélgaler ce midi, miam miam
     }
 }
 
