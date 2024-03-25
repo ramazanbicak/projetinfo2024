@@ -20,6 +20,21 @@ public class Mur {
     
     
     public Mur(int idMur, Coin coinDebut,  Coin coinFin) {
+         this.idMur=idMur;
+     this.coinDebut=coinDebut;
+     this.coinFin=coinFin;
+    
+        
+    }
+        
+        
+        
+        
+        
+        void afficher() {
+        
+        System.out.println("Identifiant :"+this.idMur+" Coin Début :"+this.coinDebut+" Coin Fin :"+this.coinFin);
+    }
     
     
 }
