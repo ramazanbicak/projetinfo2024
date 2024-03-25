@@ -15,6 +15,16 @@ public class Piece {
      int sol;
      int plafond;
      
+     
+      public Piece(int idPiece, int sol,  int plafond) {
+          
+      
+         this.idPiece=idPiece;
+     this.sol=sol;
+     this.plafond=plafond;
+      }
+     
+     
      void afficher() {
         
         System.out.println("Identifiant :"+this.idPiece+" Sol :"+this.sol+" Plafond :"+this.plafond);
