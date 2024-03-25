@@ -35,7 +35,7 @@ public class Mur {
         
         System.out.println("Identifiant :"+this.idMur+" Coin Début :"+this.coinDebut+" Coin Fin :"+this.coinFin);
     }
-        
+        @Override
          public String toString() {
         return "Mur{"+ "idMur=" + idMur + ", coinDebut=" + coinDebut + ", coinFin=" + coinFin + '}';
          }
@@ -57,4 +57,4 @@ public class Mur {
          
     
     
-}
+
