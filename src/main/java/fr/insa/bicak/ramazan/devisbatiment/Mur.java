@@ -38,6 +38,23 @@ public class Mur {
         
          public String toString() {
         return "Mur{"+ "idMur=" + idMur + ", coinDebut=" + coinDebut + ", coinFin=" + coinFin + '}';
+         }
+         
+         public double surface() {
+             System.out.println("Quelle est la hauteur sous plafond ?");
+             double h=Lire.d();
+             System.out.println("Quelle est la longeur du mur ?");
+             double longueur=Lire.d();
+             
+            double surface=h*longueur;
+            
+            return (surface);
+                 
+             
+         }
+         }
+         
+         
     
     
 }
