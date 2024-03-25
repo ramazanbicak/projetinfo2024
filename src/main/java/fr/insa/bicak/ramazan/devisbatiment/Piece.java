@@ -19,5 +19,10 @@ public class Piece {
         
         System.out.println("Identifiant :"+this.idPiece+" Sol :"+this.sol+" Plafond :"+this.plafond);
     }
+     
+     @Override
+         public String toString() {
+        return "Piece{"+ "idPiece=" + idPiece + ", sol=" + sol + ", plafond=" + plafond + '}';
+         }
     
 }
