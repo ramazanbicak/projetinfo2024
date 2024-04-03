@@ -38,7 +38,7 @@ public class Plafond {
         return "Plafond{"+ "idNiveau=" + idPlafond + ", Coins=" + listeCoins + ", Liste des Revetements=" + listeRevetements + '}';
     }
     
-    public int surface(){
+    public void surface(){
         
         
         
