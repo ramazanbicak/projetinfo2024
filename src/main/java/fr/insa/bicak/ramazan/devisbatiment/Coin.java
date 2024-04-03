@@ -45,10 +45,6 @@ package fr.insa.bicak.ramazan.devisbatiment;
     public String toString() {
         return "Coin{"+ "idCoin=" + idCoin + ", cx=" + cx + ", cy=" + cy + '}';
     
-    
-    
-    
-    
     }
     
 }
