@@ -46,8 +46,7 @@ public class DevisBatiment {
         c = new Coin(id, abscisse, ordonnee);
         
         c.afficher();
-        //bonjour
-        //apnian
+        
     }
 }
 
