@@ -8,14 +8,14 @@ package fr.insa.bicak.ramazan.devisbatiment;
  *
  * @author abentsiou01
  */
-public class Appartement {
+public class Appartement  {
     
     
     int idAppartement;
      int NiveauAppartement;
      
     public Appartement(int idAppartement, int NiveauAppartement) {
-         this.idAppartement=idAppartement;
+     this.idAppartement=idAppartement;
      this.NiveauAppartement=NiveauAppartement;
     }
     
