@@ -16,11 +16,13 @@ public class Niveau {
     double hauteurSousPlafond;
     ArrayList<String> ListeApparts = new ArrayList<String>();
     
+    /*
     public Niveau(int idNiveau, double hauteurSousPlafond, ArrayList<String> ListeApparts) {
         this.idNiveau = idNiveau;
         this.hauteurSousPlafond = hauteurSousPlafond;
         this.ListeApparts = ListeApparts;
     }
+    */
     
      void afficher() {
         
@@ -34,7 +36,7 @@ public class Niveau {
     }
     
     
-    public int suface() {
+    public void suface() {
         
     }
 }
