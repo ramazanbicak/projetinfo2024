@@ -9,19 +9,17 @@ package fr.insa.bicak.ramazan.devisbatiment;
  * @author abentsiou01
  */
 public class Piece {
-     
     
     int idPiece;
-     int sol;
-     int plafond;
+    int sol;
+    int plafond;
      
      
       public Piece(int idPiece, int sol,  int plafond) {
-          
-      
-         this.idPiece=idPiece;
+     this.idPiece=idPiece;
      this.sol=sol;
      this.plafond=plafond;
+     
       }
      
      
