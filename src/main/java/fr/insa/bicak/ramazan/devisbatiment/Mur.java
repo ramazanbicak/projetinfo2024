@@ -22,7 +22,7 @@ public class Mur {
     
     
     public Mur(int idMur, Coin coinDebut,  Coin coinFin) {
-         this.idMur=idMur;
+     this.idMur=idMur;
      this.coinDebut=coinDebut;
      this.coinFin=coinFin;
     
