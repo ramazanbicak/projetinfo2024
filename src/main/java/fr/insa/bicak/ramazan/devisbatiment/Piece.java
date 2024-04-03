@@ -13,6 +13,7 @@ public class Piece {
     int idPiece;
     int sol;
     int plafond;
+    
      
      
       public Piece(int idPiece, int sol,  int plafond) {
