@@ -4,6 +4,8 @@
  */
 package fr.insa.bicak.ramazan.devisbatiment;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author abentsiou01
@@ -16,7 +18,7 @@ public class Mur {
     Coin coinFin;
     int nbrePortes;
     int nbreFenetre;
-    
+    ArrayList<String> listeMurs = new ArrayList<>();
     
     
     public Mur(int idMur, Coin coinDebut,  Coin coinFin) {
@@ -33,7 +35,7 @@ public class Mur {
         
         void afficher() {
         
-        System.out.println("Identifiant :"+this.idMur+" Coin Début :"+this.coinDebut+" Coin Fin :"+this.coinFin);
+        System.out.println("Identifiant :"+this.idMur+" Coin Début :"+this.coinDebut+" Coin Fin :"+this.coinFin+"Nbr de porte :"+this.nbrePortes+"Nbr de fenetre :"+this.nbreFenetre);
     }
         @Override
          public String toString() {
