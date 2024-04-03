@@ -4,6 +4,8 @@
  */
 package fr.insa.bicak.ramazan.devisbatiment;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author abentsiou01
@@ -13,7 +15,7 @@ public class Piece {
     int idPiece;
     int sol;
     int plafond;
-    
+    ArrayList<String> listePieces = new ArrayList<>();
      
      
       public Piece(int idPiece, int sol,  int plafond) {
