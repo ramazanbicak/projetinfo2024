@@ -1,26 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-// TEST modifs
+
+
+
+
+
+
+
+
+
 package fr.insa.bicak.ramazan.devisbatiment;
 
 import static fr.insa.bicak.ramazan.devisbatiment.Lire.c;
 
-/**
- *
- * @author rbicak01
- */
+import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+
+
+
+
+
+
+
+
 public class DevisBatiment {
 
     private static Coin c;
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Au revoir");
+        
        
-        
-        
-        
         int id;
         double abscisse, ordonnee;
         System.out.println("Identifiant");
