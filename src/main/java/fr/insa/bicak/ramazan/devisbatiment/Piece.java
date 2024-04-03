@@ -17,14 +17,14 @@ public class Piece {
     int plafond;
     ArrayList<String> listePieces = new ArrayList<>();
      
-     
+     /*
       public Piece(int idPiece, int sol,  int plafond) {
      this.idPiece=idPiece;
      this.sol=sol;
      this.plafond=plafond;
      
       }
-     
+     */
      
      void afficher() {
         
