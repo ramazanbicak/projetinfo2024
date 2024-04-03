@@ -14,11 +14,13 @@ public class Appartement  {
     int idAppartement;
      int NiveauAppartement;
      
+    /*
     public Appartement(int idAppartement, int NiveauAppartement) {
      this.idAppartement=idAppartement;
      this.NiveauAppartement=NiveauAppartement;
     }
-    
+    */
+     
      void afficher() {
         
         System.out.println("Identifiant :"+this.idAppartement+" NiveauAppartement :"+this.NiveauAppartement);
