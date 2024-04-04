@@ -41,7 +41,7 @@ public class DevisBatiment {
         
         
         
-    public static void rechercher_Revetement_Designation(String revetementRech) {
+    public static void rechercher_Revetement_Designation(String revetementRech){
             
         String[] tab;
             
@@ -49,7 +49,7 @@ public class DevisBatiment {
         try {
             BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
             String lignelue;
-            while((lignelue=revetement.readline())!=null){
+            while((lignelue=revetement.readLine())!=null){
                tab=lignelue.split(";");
                if(tab[1].equals(revetementRech)) {
                    System.out.println(lignelue);
@@ -75,7 +75,7 @@ public class DevisBatiment {
         try {
             BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
             String lignelue;
-            while((lignelue=revetement.readline())!=null){
+            while((lignelue = revetement.readLine())!=null){
                 tab=lignelue.split(";");
                 if(tab[0].equals(idRevetementRech)) {
                     System.out.println(lignelue);
