@@ -39,6 +39,47 @@ public class DevisBatiment {
         String idRevetementChoisi = Lire.S();
         DevisBatiment.rechercher_Revetement_Identifiant(typeRevetement);
         
+        
+        
+      int reponse;
+     System.out.println("Création d'un Coin : 1=Oui et 0=Non");
+     reponse=Lire.i();
+     Coin c;
+     //Déclaration de la ArrayList
+     ArrayList<Coin> listeCoins;
+     //Initialisation de la liste
+     listeCoins=new ArrayList<>();
+     //Boucle de saisie et d'ajout de Coins dans la liste
+     while(reponse!=0){
+         System.out.println("Identifiant: ");
+         int id=Lire.i();
+         System.out.println("Abscisse: ");
+         double a=Lire.d();
+         System.out.println("Ordonnée: ");
+         double b=Lire.d();
+         //Appel du constructeur
+         c=new Coin(id,a,b);
+         
+         listeCoins.add(c);
+         System.out.println("Création d'un coin : 1=Oui et 0= Non");
+         reponse=Lire.i();
+     }//Fin while
+     
+     //Recherche d'un Coin dans listeCoins par son identifiant
+     System.out.println("Identifiant du coin Recherché:");
+     int idRech=Lire.i();
+     
+     for (int i=0;i<listeCoins.size();i++){
+         if(listeCoins.get(i).idCoin==idRech)
+             listeCoins.get(i).afficher();
+        
+        
+        
+        
+        
+        
+        
+        
     } 
         
         
