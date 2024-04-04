@@ -24,7 +24,7 @@ public class Ouverture {
     
     @Override
     public String toString() {
-        return "Coin{"+ "idouverture=" + idOuverture + ", dimX=" + dimX + ", dimY=" + dimY + '}';
+        return "Ouverture{"+ "idouverture=" + idOuverture + ", dimX=" + dimX + ", dimY=" + dimY + '}';
     
     }
     
