@@ -82,7 +82,7 @@ public class DevisBatiment {
         
     } 
         
-        
+    }  
     public static void rechercher_Revetement_Designation(String revetementRech) {
             
         String[] tab;
@@ -139,5 +139,5 @@ public class DevisBatiment {
         }
        
         
-                
-    }
+}            
+    
