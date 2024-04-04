@@ -14,7 +14,9 @@ public class Revetement {
     String designation;
     boolean pourMur;
     boolean pourSol;
+    boolean pourPlafond;
     double prixUnitaire;
     
+    montantTotalRevetement()
     
 }
