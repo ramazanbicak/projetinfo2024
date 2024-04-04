@@ -10,7 +10,7 @@ import java.io.IOException;
 
 
 
-public class Batiment {
+public class DevisBatiment {
 
     private static Coin c;
 
