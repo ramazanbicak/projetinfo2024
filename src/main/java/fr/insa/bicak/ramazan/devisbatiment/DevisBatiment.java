@@ -34,56 +34,50 @@ public class DevisBatiment {
         
         
         
-       public static void rechercher_Revetement_Designation(String revetementRech) {
+    public static void rechercher_Revetement_Designation(String revetementRech) {
             
-            String[] tab;
+        String[] tab;
             
             
-            try {
-                BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
-               while((lignelue=revetement.readline())!=null){
-                   tab=lignelue.split(";");
-                   if(tab[1].equals(revetementRech)) {
-                       System.out.println(lignelue);
-                   }
+        try {
+            BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
+            while((lignelue=revetement.readline())!=null){
+               tab=lignelue.split(";");
+               if(tab[1].equals(revetementRech)) {
+                   System.out.println(lignelue);
                }
-               revetement.close();
             }
-            catch(FileNotFoundException err){
-                System.out.println("Erreur "+err);
-                
-            }
-            catch(IOException err) {
-                System.out.println("Erreur "+err);
-
-                
-            }
-            
-            
+            revetement.close();
         }
+        catch(FileNotFoundException err){
+            System.out.println("Erreur "+err);
+             
+        }
+        catch(IOException err) {
+            System.out.println("Erreur "+err);
+        }
+    }
        
        
-       public static void rechercher_Revetement_Identifiant(String idRevetementRech) {
+    public static void rechercher_Revetement_Identifiant(String idRevetementRech) {
             
-            String[] tab;
+        String[] tab;
             
             
-            try {
-                BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
-               while((lignelue=revetement.readline())!=null){
-                   tab=lignelue.split(";");
-                   if(tab[0].equals(idRevetementRech)) {
-                       System.out.println(lignelue);
-                       System.out.println("prix unitaire :"+tab[5]+"eruos/m2");
-                       
-                   }
-               }
-               revetement.close();
+        try {
+            BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
+            while((lignelue=revetement.readline())!=null){
+                tab=lignelue.split(";");
+                if(tab[0].equals(idRevetementRech)) {
+                    System.out.println(lignelue);
+                    System.out.println("prix unitaire :"+tab[5]+"eruos/m2");
+                }
             }
-            catch(FileNotFoundException err){
-                System.out.println("Erreur "+err);
-                
-            }
+            revetement.close();
+        }
+        catch(FileNotFoundException err){
+            System.out.println("Erreur "+err);
+        }
             catch(IOException err) {
                 System.out.println("Erreur "+err);
 
