@@ -17,6 +17,6 @@ public class Revetement {
     boolean pourPlafond;
     double prixUnitaire;
     
-    montantTotalRevetement() = test
+//    montantTotalRevetement() on le met là ou dans le main ?
     
 }
