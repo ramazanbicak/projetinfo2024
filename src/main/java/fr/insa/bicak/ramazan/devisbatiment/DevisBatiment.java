@@ -32,6 +32,14 @@ public class DevisBatiment {
         
         c.afficher();
         
+        System.out.println("type de revetement recherché :");
+        String typeRevetement = Lire.S();
+        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
+        System.out.println("Identifiant du revetement choisi : ");
+        String idRevetementChoisi = Lire.S();
+        DevisBatiment.rechercher_Revetement_Identifiant(typeRevetement);
+        
+        
         
         
     public static void rechercher_Revetement_Designation(String revetementRech) {
@@ -41,6 +49,7 @@ public class DevisBatiment {
             
         try {
             BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
+            String lignelue;
             while((lignelue=revetement.readline())!=null){
                tab=lignelue.split(";");
                if(tab[1].equals(revetementRech)) {
@@ -66,6 +75,7 @@ public class DevisBatiment {
             
         try {
             BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
+            String lignelue;
             while((lignelue=revetement.readline())!=null){
                 tab=lignelue.split(";");
                 if(tab[0].equals(idRevetementRech)) {
