@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 package fr.insa.bicak.ramazan.devisbatiment;
 
 import static fr.insa.bicak.ramazan.devisbatiment.Lire.c;
