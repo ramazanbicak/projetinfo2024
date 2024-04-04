@@ -15,7 +15,7 @@ public class DevisBatiment {
 
     public static void main(String[] args) {
         
-       
+       /*
         int id;
         double abscisse, ordonnee;
         System.out.println("Identifiant");
@@ -30,7 +30,8 @@ public class DevisBatiment {
         c = new Coin(id, abscisse, ordonnee);
         
         c.afficher();
-        
+        */
+       
         System.out.println("type de revetement recherché :");
         String typeRevetement = Lire.S();
         DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
