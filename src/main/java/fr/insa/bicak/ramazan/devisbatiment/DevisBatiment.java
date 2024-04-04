@@ -38,10 +38,10 @@ public class DevisBatiment {
         String idRevetementChoisi = Lire.S();
         DevisBatiment.rechercher_Revetement_Identifiant(typeRevetement);
         
+    } 
         
         
-        
-    public static void rechercher_Revetement_Designation(String revetementRech){
+    public static void rechercher_Revetement_Designation(String revetementRech) {
             
         String[] tab;
             
@@ -99,5 +99,3 @@ public class DevisBatiment {
         
                 
     }
-}
-
