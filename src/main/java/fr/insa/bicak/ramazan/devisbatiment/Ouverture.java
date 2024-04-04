@@ -4,6 +4,11 @@
  */
 package fr.insa.bicak.ramazan.devisbatiment;
 
+/**
+ *
+ * @author Julien
+ */
+
 
 public class Ouverture {
     
