@@ -17,6 +17,6 @@ public class Revetement {
     boolean pourPlafond;
     double prixUnitaire;
     
-//    montantTotalRevetement() on le met là ou dans le main ?
+// On met montantTotalRevetement() là ou dans le main ?
     
 }
