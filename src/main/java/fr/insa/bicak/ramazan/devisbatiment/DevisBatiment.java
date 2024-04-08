@@ -56,8 +56,11 @@ public class DevisBatiment {
      int rep;
      System.out.println("Creation d'un mur :1=0 et 0=Non");
      rep =Lire.i();
+     
      ArrayList<Mur> listeMurs;
      listeMurs = new ArrayList<>();
+     
+     Array
      
      while(rep !=0){
          
@@ -73,6 +76,17 @@ public class DevisBatiment {
          int nbfenetre = Lire.i();
          System.out.println("Combien il y a de porte ?");
          int nbporte = Lire.i();
+         
+         
+        System.out.println("type de revetement recherche :");
+        String typeRevetement = Lire.S();
+        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
+        System.out.println("Identifiant du revetement choisi : ");
+        String idRevetementChoisi = Lire.S();
+        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
+     
+         
+         
                  
          Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre);
          listeMurs.add(m);
@@ -81,6 +95,7 @@ public class DevisBatiment {
          rep=Lire.i();
          
          
+        
          
      }
      
@@ -95,12 +110,15 @@ public class DevisBatiment {
     int reppl;
      System.out.println("Creation d'un sol :1=0 et 0=Non");
      rep =Lire.i();
+     
      //Liste de Coin des sols
      ArrayList<Coin> listeCoinsol;
      listeCoinsol = new ArrayList<>();
+     
      //Liste des sols
      ArrayList<Sol> listeSols;
      listeSols = new ArrayList<>();
+     
      //liste des plafonds
      ArrayList<Plafond> listePlafonds;
      listePlafonds = new ArrayList<>();
@@ -127,8 +145,12 @@ public class DevisBatiment {
          System.out.println("Voulez-vous un plafond : 1=Oui 0=Non");
          reppl = Lire.i();
          if (reppl == 1){
-             Plafond p = new Plafond(idcoin, listePlafonds);
+             
+             Plafond p = new Plafond(id, listeCoinsol);
+             listePlafonds.add(p);
          }
+         
+         
          
          
          System.out.println("Creation d'un Sol : 1=Oui et 0= Non");
@@ -246,7 +268,7 @@ public class DevisBatiment {
                 tab=lignelue.split(";");
                 if(tab[0].equals(idRevetementRech)) {
                     System.out.println(lignelue);
-                    System.out.println("prix unitaire :"+tab[5]+"eruos/m2");
+                    System.out.println("prix unitaire :"+tab[5]+"euros/m2");
                 }
             }
             revetement.close();

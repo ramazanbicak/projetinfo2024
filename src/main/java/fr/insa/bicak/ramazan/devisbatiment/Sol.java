@@ -10,17 +10,17 @@ import java.util.ArrayList;
 public class Sol {
     
     int idSol;
-    ArrayList<String> listeCoins= new ArrayList<>();
+    ArrayList<Coin> listeCoins= new ArrayList<>();
     ArrayList<String> listeRevetements = new ArrayList<>();
     
-    /*
-      public Sol(int idSol, ArrayList<String> listeCoins,ArrayList<String> listeRevetements) {
+    
+      public Sol(int idSol, ArrayList<Coin> listeCoins) {
         this.idSol = idSol;
         this.listeCoins = listeCoins;
-        this.listeRevetements = listeRevetements;
+        //this.listeRevetements = listeRevetements;
     }
     
-    */
+    
     
     void afficher() {
         

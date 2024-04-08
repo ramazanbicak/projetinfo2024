@@ -12,19 +12,19 @@ import java.util.ArrayList;
  */
 public class Plafond {
     int idPlafond;
-    ArrayList<String> listeCoins= new ArrayList<>();
+    ArrayList<Coin> listeCoins= new ArrayList<>();
     ArrayList<String> listeRevetements = new ArrayList<>();
     
     
     
-    /*
-    public Plafond(int idPlafond, ArrayList<String> listeCoins,ArrayList<String> listeRevetements) {
+    
+    public Plafond(int idPlafond, ArrayList<Coin> listeCoins) {
         this.idPlafond = idPlafond;
         this.listeCoins = listeCoins;
-        this.listeRevetements = listeRevetements;
+        //this.listeRevetements = listeRevetements;
     }
     
-    */
+    
     
     
     void afficher() {
