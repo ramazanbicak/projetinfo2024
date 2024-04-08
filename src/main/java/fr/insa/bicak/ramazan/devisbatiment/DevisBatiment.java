@@ -15,104 +15,102 @@ public class DevisBatiment {
 
     public static void main(String[] args) {
         
-     int niv;
+        int niv;
     
-     /*
-     System.out.println("Quelle est le niveau ?");
-     niv = Lire.i();
-     System.out.println("Quelle est la hauteur sous Plafond");
-     double hauteurSousPlafond = Lire.d();
+        /*
+        System.out.println("Quelle est le niveau ?");
+        niv = Lire.i();
+        System.out.println("Quelle est la hauteur sous Plafond");
+        double hauteurSousPlafond = Lire.d();
      
-     */
+        */
      
     
         
       
-    // CREATION DE COINS
-     System.out.println("Creation d'un Coin : 1=Oui et 0=Non");
-     int reponse=Lire.i();
-     Coin c;
-     //Déclaration de la ArrayList
-     ArrayList<Coin> listeCoins;
-     //Initialisation de la liste
-     listeCoins=new ArrayList<>();
-     //Boucle de saisie et d'ajout de Coins dans la liste
-     while(reponse!=0){
-         System.out.println("Identifiant: ");
-         int id=Lire.i();
-         System.out.println("Abscisse: ");
-         double a=Lire.d();
-         System.out.println("Ordonnee: ");
-         double b=Lire.d();
-         //Appel du constructeur
-         c=new Coin(id,a,b);
+        // CREATION DE COINS
+        int reponse;
+        System.out.println("Creation d'un Coin : 1=Oui et 0=Non");
+        reponse=Lire.i();
+        Coin c;
+        //Déclaration de la ArrayList
+        ArrayList<Coin> listeCoins;
+        //Initialisation de la liste
+        listeCoins=new ArrayList<>();
+        //Boucle de saisie et d'ajout de Coins dans la liste
+        while(reponse!=0){
+            System.out.println("Identifiant: ");
+            int id=Lire.i();
+            System.out.println("Abscisse: ");
+            double a=Lire.d();
+            System.out.println("Ordonnee: ");
+            double b=Lire.d();
+            //Appel du constructeur
+            c=new Coin(id,a,b);
          
-         listeCoins.add(c);
-         System.out.println("Creation d'un coin : 1=Oui et 0= Non");
-         reponse=Lire.i();
-     }//Fin while
+           listeCoins.add(c);
+            System.out.println("Creation d'un coin : 1=Oui et 0= Non");
+            reponse=Lire.i();
+        }//Fin while
      
      
      
      
-     // CREATION DES MURS
-     System.out.println("Creation d'un mur :1=0 et 0=Non");
-     int rep =Lire.i();
-     ArrayList<Mur> listeMurs;
-     listeMurs = new ArrayList<>();
+        // CREATION DES MURS
+        int rep;
+        System.out.println("Creation d'un mur :1=0 et 0=Non");
+        rep =Lire.i();
+        ArrayList<Mur> listeMurs;
+        listeMurs = new ArrayList<>();
      
-     while(rep !=0){
+        while(rep !=0){
          
-         
-         System.out.println("Identifiant: ");
-         int id=Lire.i();
-         System.out.println("Quelle est le coin de debut");
-         int idcd=Lire.i();
-         System.out.println("Quelle est le coin de fin");
-         int idcf= Lire.i();
-         
-         System.out.println("Combien il y a de fenetre ?");
-         int nbfenetre = Lire.i();
-         System.out.println("Combien il y a de porte ?");
-         int nbporte = Lire.i();
-                 
-         Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre);
-         listeMurs.add(m);
-         
-         System.out.println("Creation d'un Mur : 1=Oui et 0= Non");
-         rep=Lire.i();
-         
-         
-         
-     }
+            System.out.println("Identifiant: ");
+            int id=Lire.i();
+            System.out.println("Quelle est le coin de debut");
+            int idcd=Lire.i();
+            System.out.println("Quelle est le coin de fin");
+            int idcf= Lire.i();
+            
+            System.out.println("Combien il y a de fenetre ?");
+            int nbfenetre = Lire.i();
+            System.out.println("Combien il y a de porte ?");
+            int nbporte = Lire.i();
+                
+            Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre);
+            listeMurs.add(m);
+        
+            System.out.println("Creation d'un Mur : 1=Oui et 0= Non");
+            rep=Lire.i();
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //Recherche d'un Coin dans listeCoins par son identifiant
+    System.out.println("Identifiant du coin Recherche:");
+    int idRech=Lire.i();
+    
+    for (int i=0;i<listeCoins.size();i++){
+        if(listeCoins.get(i).idCoin==idRech)
+            listeCoins.get(i).afficher();
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     //Recherche d'un Coin dans listeCoins par son identifiant
-     System.out.println("Identifiant du coin Recherche:");
-     int idRech=Lire.i();
-     
-     for (int i=0;i<listeCoins.size();i++){
-         if(listeCoins.get(i).idCoin==idRech)
-             listeCoins.get(i).afficher();
-       
         
     } 
         
      
-     System.out.println("Identifiant du Mur Recherche:");
-     int idRechm=Lire.i();
-     
-     for (int i=0;i<listeMurs.size();i++){
-         if(listeMurs.get(i).idMur==idRechm)
-             listeMurs.get(i).afficher();
+    System.out.println("Identifiant du Mur Recherche:");
+    int idRechm=Lire.i();
+    
+    for (int i=0;i<listeMurs.size();i++){
+        if(listeMurs.get(i).idMur==idRechm)
+            listeMurs.get(i).afficher();
        
         
     }
