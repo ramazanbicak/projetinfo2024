@@ -89,7 +89,7 @@ public class DevisBatiment {
         
          
                  
-         Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre);
+         Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre, listeRevetementMur);
          listeMurs.add(m);
          
          System.out.println("Creation d'un Mur : 1=Oui et 0= Non");
@@ -212,7 +212,7 @@ public class DevisBatiment {
         
     }
      
-     
+    
      
      
      
@@ -290,7 +290,7 @@ public class DevisBatiment {
         
         
          String[] tab;
-         int pourMur = Integer.parseInt(str1);
+         
          
             
         try {
@@ -305,7 +305,7 @@ public class DevisBatiment {
                     int pourmur = Integer.parseInt(tab[2]);
                     int poursol = Integer.parseInt(tab[3]);
                     int pourplafond = Integer.parseInt(tab[4]);
-                    int prixUnitaire = Integer.parseInt(tab[5]);
+                    double prixUnitaire = Double.parseDouble(tab[5]);
                     Revetement r = new Revetement(idrev, tab[1], pourmur, poursol, pourplafond, prixUnitaire);
                     listeRevetement.add(r);
                 }
