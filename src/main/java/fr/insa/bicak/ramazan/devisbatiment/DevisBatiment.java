@@ -132,16 +132,16 @@ public class DevisBatiment {
             BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
             String lignelue;
             while((lignelue=revetement.readLine())!=null){
-               tab=lignelue.split(";");
-               if(tab[1].equals(revetementRech)) {
-                   System.out.println(lignelue);
-               }
+                tab=lignelue.split(";");
+                if(tab[1].equals(revetementRech)) {
+                    System.out.println(lignelue);
+                }
             }
             revetement.close();
         }
+        
         catch(FileNotFoundException err){
-            System.out.println("Erreur "+err);
-             
+            System.out.println("Erreur "+err);     
         }
         catch(IOException err) {
             System.out.println("Erreur "+err);
@@ -169,15 +169,13 @@ public class DevisBatiment {
         catch(FileNotFoundException err){
             System.out.println("Erreur "+err);
         }
-            catch(IOException err) {
-                System.out.println("Erreur "+err);
-
-                
-            }
-            
-            
+        catch(IOException err) {
+            System.out.println("Erreur "+err);  
         }
+            
+            
+    }
        
      
-}            
+} //fin de DevisBatiment            
     
