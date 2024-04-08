@@ -13,15 +13,15 @@ import java.util.ArrayList;
 public class Plafond {
     int idPlafond;
     ArrayList<Coin> listeCoins= new ArrayList<>();
-    ArrayList<String> listeRevetements = new ArrayList<>();
+    ArrayList<Revetement> listeRevetements = new ArrayList<>();
     
     
     
     
-    public Plafond(int idPlafond, ArrayList<Coin> listeCoins) {
+    public Plafond(int idPlafond, ArrayList<Coin> listeCoins, ArrayList<Revetement> listeRevetements ) {
         this.idPlafond = idPlafond;
         this.listeCoins = listeCoins;
-        //this.listeRevetements = listeRevetements;
+        this.listeRevetements = listeRevetements;
     }
     
     

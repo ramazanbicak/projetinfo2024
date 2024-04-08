@@ -11,19 +11,20 @@ import java.io.IOException;
 
 public class DevisBatiment {
 
+    
+    public static double hauteurSousPlafond;
     private static Coin c;
 
     public static void main(String[] args) {
         
      int niv;
     
-     /*
-     System.out.println("Quelle est le niveau ?");
-     niv = Lire.i();
+     
+     
      System.out.println("Quelle est la hauteur sous Plafond");
      double hauteurSousPlafond = Lire.d();
      
-     */
+     
      
         
       int reponse;
@@ -78,15 +79,12 @@ public class DevisBatiment {
          
          
          
-         
+         //methode revetement
        System.out.println("Voulez-vous mettre un revetement ?");
        int repv = Lire.i();
         
         while(repv != 0) {
             
-        
-        System.out.println("Voulez-vous mettre un revetement ?");
-        repv = Lire.i();
         
         System.out.println("type de revetement recherche :");
         String typeRevetement = Lire.S();
@@ -96,11 +94,24 @@ public class DevisBatiment {
         DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
         creerRevetement(idRevetementChoisi, listeRevetementMur);
         
+        
+        System.out.println("Voulez-vous mettre un revetement ?");
+        repv = Lire.i();
         }
          
                  
          Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre, listeRevetementMur);
          listeMurs.add(m);
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
          
          System.out.println("Creation d'un Mur : 1=Oui et 0= Non");
          rep=Lire.i();
@@ -155,17 +166,68 @@ public class DevisBatiment {
          Sol s = new Sol(id, listeCoinsol);
          listeSols.add(s);
          
+         System.out.println(listeSols.get(id-1).surface());
+         
+         
+         //methode revetement
+         
+         
+      ArrayList<Revetement> listeRevetementSol;
+     listeRevetementSol = new ArrayList<>();
+     
+       System.out.println("Voulez-vous mettre un revetement ?");
+       int repv = Lire.i();
+        
+      
+            
+        
+        System.out.println("type de revetement recherche :");
+        String typeRevetement = Lire.S();
+        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
+        System.out.println("Identifiant du revetement choisi : ");
+        String idRevetementChoisi = Lire.S();
+        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
+        creerRevetement(idRevetementChoisi, listeRevetementSol);
+        
+        
+        
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
          System.out.println("Voulez-vous un plafond : 1=Oui 0=Non");
          reppl = Lire.i();
+         
          if (reppl == 1){
              
-             Plafond p = new Plafond(id, listeCoinsol);
-             listePlafonds.add(p);
+             
+         
+     ArrayList<Revetement> listeRevetementPlafond;
+     listeRevetementPlafond = new ArrayList<>();
+     
+      System.out.println("type de revetement recherche :");
+        typeRevetement = Lire.S();
+        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
+        System.out.println("Identifiant du revetement choisi : ");
+        idRevetementChoisi = Lire.S();
+        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
+        creerRevetement(idRevetementChoisi, listeRevetementPlafond);
+        
+        
+        
+        Plafond p = new Plafond(id, listeCoinsol, listeRevetementPlafond);
+        listePlafonds.add(p);
+         
          }
          
-         
-         
          listeCoinsol.clear();
+         
          
          System.out.println("Creation d'un Sol : 1=Oui et 0= Non");
          rep=Lire.i();

@@ -33,9 +33,35 @@ public class Sol {
         return "Sol{"+ "idNiveau=" + idSol + ", Coins=" + listeCoins + ", Liste des Revetements=" + listeRevetements + '}';
     }
     
+    public double surface(){
+        
+        double longueur;
+        double largueur;
+        longueur = 0;
+        largueur = 0;
+        
+        for (int i = 0; i<4; i++){
+            
+        if(listeCoins.get(0).cx == listeCoins.get(i).cx){
+            longueur = Math.abs(listeCoins.get(0).cy - listeCoins.get(i).cy);
+         
+        }
+        
+        if(listeCoins.get(0).cy == listeCoins.get(i).cy){
+            largueur = Math.abs(listeCoins.get(0).cx - listeCoins.get(i).cx);
+            
+            
+        }
+        
+        
+        
+    }
+    double surface;
+    surface = longueur * largueur;
     
-    
-    
+    return(surface);
+        
+    }
     
     
     

@@ -45,12 +45,12 @@ public class Mur {
          }
          
          public double surface() {
-             System.out.println("Quelle est la hauteur sous plafond ?");
-             double h=Lire.d();
-             System.out.println("Quelle est la longeur du mur ?");
-             double longueur=Lire.d();
              
-            double surface=h*longueur;
+             double surface;
+             
+             surface = Math.abs(coinDebut.cx - coinFin.cx) * DevisBatiment.hauteurSousPlafond;
+             
+            
             
             return (surface);
                  
