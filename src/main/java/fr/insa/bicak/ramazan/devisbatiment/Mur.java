@@ -37,7 +37,7 @@ public class Mur {
         
         void afficher() {
         
-        System.out.println("Identifiant :"+this.idMur+" Coin Debut :"+this.coinDebut+" Coin Fin :"+this.coinFin+"Nbr de porte :"+this.nbrePortes+"Nbr de fenetre :"+this.nbreFenetre);
+        System.out.println("Identifiant :"+this.idMur+" Coin Debut :"+this.coinDebut+" Coin Fin :"+this.coinFin+"Nbr de porte :"+this.nbrePortes+"Nbr de fenetre :"+this.nbreFenetre+"liste des Revetements :"+this.listeRevetements);
     }
         @Override
          public String toString() {
