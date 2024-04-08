@@ -93,27 +93,23 @@ public class DevisBatiment {
     
     
     
-    //Recherche d'un Coin dans listeCoins par son identifiant
-    System.out.println("Identifiant du coin Recherche:");
-    int idRech=Lire.i();
+        //Recherche d'un Coin dans listeCoins par son identifiant
+        System.out.println("Identifiant du coin Recherche:");
+        int idRech=Lire.i();
     
-    for (int i=0;i<listeCoins.size();i++){
-        if(listeCoins.get(i).idCoin==idRech)
-            listeCoins.get(i).afficher();
-     
-        
-    } 
+        for (int i=0;i<listeCoins.size();i++){
+            if(listeCoins.get(i).idCoin==idRech)
+               listeCoins.get(i).afficher();
+        } 
         
      
-    System.out.println("Identifiant du Mur Recherche:");
-    int idRechm=Lire.i();
+        System.out.println("Identifiant du Mur Recherche:");
+        int idRechm=Lire.i();
     
-    for (int i=0;i<listeMurs.size();i++){
-        if(listeMurs.get(i).idMur==idRechm)
-            listeMurs.get(i).afficher();
-       
-        
-    }
+        for (int i=0;i<listeMurs.size();i++){
+            if(listeMurs.get(i).idMur==idRechm)
+                listeMurs.get(i).afficher();
+        }
      
      
         System.out.println("type de revetement recherche :");
@@ -123,10 +119,8 @@ public class DevisBatiment {
         String idRevetementChoisi = Lire.S();
         DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
      
-     
-     
         
-    }  
+    }  //fin du main
     
     
     public static void rechercher_Revetement_Designation(String revetementRech) {
