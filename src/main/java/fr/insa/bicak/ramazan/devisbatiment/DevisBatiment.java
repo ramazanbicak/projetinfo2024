@@ -15,9 +15,17 @@ public class DevisBatiment {
 
     public static void main(String[] args) {
         
-        
-       
-       
+     int niv;
+    
+     /*
+     System.out.println("Quelle est le niveau ?");
+     niv = Lire.i();
+     System.out.println("Quelle est la hauteur sous Plafond");
+     double hauteurSousPlafond = Lire.d();
+     
+     */
+     
+    
         
         
       int reponse;
