@@ -70,7 +70,12 @@ public class DevisBatiment {
          listeMurs.add(m);
          
          
-         
+        System.out.println("type de revetement recherché pour le mur:");
+        typeRevetement = Lire.S();
+        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
+        System.out.println("Identifiant du revetement choisi : ");
+        idRevetementChoisi = Lire.S();
+        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
          
          
          
