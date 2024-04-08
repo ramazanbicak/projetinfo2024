@@ -61,7 +61,12 @@ public class DevisBatiment {
          System.out.println("Quelle est le coin de fin");
          int idcf= Lire.i();
          
-         Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1));
+         System.out.println("Combien il y a de fenetre ?");
+         int nbfenetre = Lire.i();
+         System.out.println("Combien il y a de porte ?");
+         int nbporte = Lire.i();
+                 
+         Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre);
          listeMurs.add(m);
          
          System.out.println("Creation d'un Mur : 1=Oui et 0= Non");
@@ -92,7 +97,7 @@ public class DevisBatiment {
     } 
         
      
-     System.out.println("Identifiant du Mur Recherché:");
+     System.out.println("Identifiant du Mur Recherche:");
      int idRechm=Lire.i();
      
      for (int i=0;i<listeMurs.size();i++){
@@ -103,7 +108,7 @@ public class DevisBatiment {
     }
      
      
-        System.out.println("type de revetement recherché :");
+        System.out.println("type de revetement recherche :");
         String typeRevetement = Lire.S();
         DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
         System.out.println("Identifiant du revetement choisi : ");

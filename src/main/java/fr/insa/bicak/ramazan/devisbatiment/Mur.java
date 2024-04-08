@@ -21,11 +21,13 @@ public class Mur {
     //ArrayList<String> listeMurs = new ArrayList<>();
     
     
-    public Mur(int idMur, Coin coinDebut,  Coin coinFin) {
+    public Mur(int idMur, Coin coinDebut,  Coin coinFin, int nbrePortes, int nbreFenetre) {
      this.idMur=idMur;
      this.coinDebut=coinDebut;
      this.coinFin=coinFin;
-    
+     this.nbreFenetre = nbreFenetre;
+     this.nbrePortes = nbrePortes;
+             
         
     }
         
@@ -35,7 +37,7 @@ public class Mur {
         
         void afficher() {
         
-        System.out.println("Identifiant :"+this.idMur+" Coin Début :"+this.coinDebut+" Coin Fin :"+this.coinFin+"Nbr de porte :"+this.nbrePortes+"Nbr de fenetre :"+this.nbreFenetre);
+        System.out.println("Identifiant :"+this.idMur+" Coin Debut :"+this.coinDebut+" Coin Fin :"+this.coinFin+"Nbr de porte :"+this.nbrePortes+"Nbr de fenetre :"+this.nbreFenetre);
     }
         @Override
          public String toString() {
