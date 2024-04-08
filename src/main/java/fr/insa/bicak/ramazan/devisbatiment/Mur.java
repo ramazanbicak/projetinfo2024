@@ -47,8 +47,17 @@ public class Mur {
          public double surface() {
              
              double surface;
+             surface = 55;
+             if(coinDebut.cx == coinFin.cx){
+                 
+             surface = Math.abs(coinDebut.cy - coinFin.cy) * DevisBatiment.hauteurSousPlafond;
              
+             }
+             if(coinDebut.cy == coinFin.cy){
+                 
              surface = Math.abs(coinDebut.cx - coinFin.cx) * DevisBatiment.hauteurSousPlafond;
+             
+             }
              
             
             
