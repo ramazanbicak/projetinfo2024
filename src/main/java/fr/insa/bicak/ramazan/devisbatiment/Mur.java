@@ -18,7 +18,7 @@ public class Mur {
     Coin coinFin;
     int nbrePortes;
     int nbreFenetre;
-    ArrayList<String> listeMurs = new ArrayList<>();
+    //ArrayList<String> listeMurs = new ArrayList<>();
     
     
     public Mur(int idMur, Coin coinDebut,  Coin coinFin) {

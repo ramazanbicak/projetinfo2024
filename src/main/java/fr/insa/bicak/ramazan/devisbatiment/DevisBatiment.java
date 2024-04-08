@@ -18,7 +18,12 @@ public class DevisBatiment {
         
        
         
-
+        System.out.println("type de revetement recherché :");
+        String typeRevetement = Lire.S();
+        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
+        System.out.println("Identifiant du revetement choisi : ");
+        String idRevetementChoisi = Lire.S();
+        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
         
       int reponse;
      System.out.println("Creation d'un Coin : 1=Oui et 0=Non");
@@ -50,7 +55,7 @@ public class DevisBatiment {
      rep =Lire.i();
      ArrayList<Mur> listeMurs;
      listeMurs = new ArrayList<>();
-     Mur m;
+     
      while(rep !=0){
          
          
@@ -60,22 +65,24 @@ public class DevisBatiment {
          int idcd=Lire.i();
          System.out.println("Quelle est le coin de fin");
          int idcf= Lire.i();
-         /*
-         listeCoins.get(idcd).cx;
-         listeCoins.get(idcd).cy;
          
-         
-         listeCoins.get(idcf).cx;
-         listeCoins.get(idcf).cy;
-         
-         
-         
-         //Appel du constructeur
-        
-         */
-         
-         m = new Mur(id, listeCoins.get(idcd), listeCoins.get(idcf));
+         Mur m = new Mur(id, listeCoins.get(idcd), listeCoins.get(idcf));
          listeMurs.add(m);
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
          
          System.out.println("Creation d'un Mur : 1=Oui et 0= Non");
          rep=Lire.i();
@@ -117,15 +124,10 @@ public class DevisBatiment {
      
      
      
-     System.out.println("type de revetement recherché :");
-        String typeRevetement = Lire.S();
-        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
-        System.out.println("Identifiant du revetement choisi : ");
-        String idRevetementChoisi = Lire.S();
-        DevisBatiment.rechercher_Revetement_Identifiant(typeRevetement);
-     
-     
+        
     }  
+    
+    
     public static void rechercher_Revetement_Designation(String revetementRech) {
             
         String[] tab;
@@ -181,6 +183,6 @@ public class DevisBatiment {
             
         }
        
-        
+     
 }            
     
