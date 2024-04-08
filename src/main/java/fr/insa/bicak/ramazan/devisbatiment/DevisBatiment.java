@@ -27,10 +27,10 @@ public class DevisBatiment {
      
     
         
-        
-      int reponse;
+      
+    // CREATION DE COINS
      System.out.println("Creation d'un Coin : 1=Oui et 0=Non");
-     reponse=Lire.i();
+     int reponse=Lire.i();
      Coin c;
      //Déclaration de la ArrayList
      ArrayList<Coin> listeCoins;
@@ -53,9 +53,11 @@ public class DevisBatiment {
      }//Fin while
      
      
-     int rep;
+     
+     
+     // CREATION DES MURS
      System.out.println("Creation d'un mur :1=0 et 0=Non");
-     rep =Lire.i();
+     int rep =Lire.i();
      ArrayList<Mur> listeMurs;
      listeMurs = new ArrayList<>();
      
