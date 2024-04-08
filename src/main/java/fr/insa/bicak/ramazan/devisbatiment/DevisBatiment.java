@@ -17,13 +17,8 @@ public class DevisBatiment {
         
         
        
+       
         
-        System.out.println("type de revetement recherché :");
-        String typeRevetement = Lire.S();
-        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
-        System.out.println("Identifiant du revetement choisi : ");
-        String idRevetementChoisi = Lire.S();
-        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
         
       int reponse;
      System.out.println("Creation d'un Coin : 1=Oui et 0=Non");
@@ -66,28 +61,8 @@ public class DevisBatiment {
          System.out.println("Quelle est le coin de fin");
          int idcf= Lire.i();
          
-         Mur m = new Mur(id, listeCoins.get(idcd), listeCoins.get(idcf));
+         Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1));
          listeMurs.add(m);
-         
-         
-        System.out.println("type de revetement recherché pour le mur:");
-        typeRevetement = Lire.S();
-        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
-        System.out.println("Identifiant du revetement choisi : ");
-        idRevetementChoisi = Lire.S();
-        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
          
          System.out.println("Creation d'un Mur : 1=Oui et 0= Non");
          rep=Lire.i();
@@ -125,7 +100,15 @@ public class DevisBatiment {
              listeMurs.get(i).afficher();
        
         
-    } 
+    }
+     
+     
+        System.out.println("type de revetement recherché :");
+        String typeRevetement = Lire.S();
+        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
+        System.out.println("Identifiant du revetement choisi : ");
+        String idRevetementChoisi = Lire.S();
+        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
      
      
      
