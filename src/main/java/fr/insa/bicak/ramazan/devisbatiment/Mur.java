@@ -18,16 +18,16 @@ public class Mur {
     Coin coinFin;
     int nbrePortes;
     int nbreFenetre;
-    //ArrayList<String> listeMurs = new ArrayList<>();
+    ArrayList<Revetement> listeRevetements = new ArrayList<>();
     
     
-    public Mur(int idMur, Coin coinDebut,  Coin coinFin, int nbrePortes, int nbreFenetre) {
+    public Mur(int idMur, Coin coinDebut,  Coin coinFin, int nbrePortes, int nbreFenetre, ArrayList<Revetement> listeRevetements) {
      this.idMur=idMur;
      this.coinDebut=coinDebut;
      this.coinFin=coinFin;
      this.nbreFenetre = nbreFenetre;
      this.nbrePortes = nbrePortes;
-             
+     this.listeRevetements = listeRevetements;       
         
     }
         

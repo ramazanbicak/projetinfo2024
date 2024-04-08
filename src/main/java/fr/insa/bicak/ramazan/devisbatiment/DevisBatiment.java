@@ -60,7 +60,8 @@ public class DevisBatiment {
      ArrayList<Mur> listeMurs;
      listeMurs = new ArrayList<>();
      
-     Array
+     ArrayList<Revetement> listeRevetementMur;
+     listeRevetementMur = new ArrayList<>();
      
      while(rep !=0){
          
@@ -84,8 +85,8 @@ public class DevisBatiment {
         System.out.println("Identifiant du revetement choisi : ");
         String idRevetementChoisi = Lire.S();
         DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
-     
-         
+        creerRevetement(idRevetementChoisi, listeRevetementMur);
+        
          
                  
          Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre);
@@ -284,6 +285,48 @@ public class DevisBatiment {
             
             
         }
+    
+    public static void creerRevetement(String idRevetementRech, ArrayList<Revetement> listeRevetement) {
+        
+        
+         String[] tab;
+         int pourMur = Integer.parseInt(str1);
+         
+            
+        try {
+            BufferedReader revetement=new BufferedReader(new FileReader("Catalogue.txt"));
+            String lignelue;
+            while((lignelue = revetement.readLine())!=null){
+                tab=lignelue.split(";");
+                
+                if(tab[0].equals(idRevetementRech)) {
+                    
+                    int idrev = Integer.parseInt(tab[0]);
+                    int pourmur = Integer.parseInt(tab[2]);
+                    int poursol = Integer.parseInt(tab[3]);
+                    int pourplafond = Integer.parseInt(tab[4]);
+                    int prixUnitaire = Integer.parseInt(tab[5]);
+                    Revetement r = new Revetement(idrev, tab[1], pourmur, poursol, pourplafond, prixUnitaire);
+                    listeRevetement.add(r);
+                }
+            }
+            revetement.close();
+        }
+        catch(FileNotFoundException err){
+            System.out.println("Erreur "+err);
+        }
+            catch(IOException err) {
+                System.out.println("Erreur "+err);
+
+                
+            }
+            
+        
+        
+        
+        
+    
+    }
        
      
 }            
