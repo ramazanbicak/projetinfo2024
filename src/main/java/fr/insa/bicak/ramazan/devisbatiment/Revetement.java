@@ -29,7 +29,11 @@ public class Revetement {
         
     }
     
+    void afficher() {
+        
+        System.out.println("REV : "+this.idRevetement+" Nom : "+this.designation+" PourMur : "+this.pourMur+"PourSol : "+this.pourSol+"PourPlafond :"+this.pourPlafond+"Prix Unitaire : "+this.prixUnitaire);
     
+    }
     
     
     

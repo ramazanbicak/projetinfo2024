@@ -25,8 +25,6 @@ public class DevisBatiment {
      
      */
      
-    
-        
         
       int reponse;
      System.out.println("Creation d'un Coin : 1=Oui et 0=Non");
@@ -79,6 +77,17 @@ public class DevisBatiment {
          int nbporte = Lire.i();
          
          
+         
+         
+       System.out.println("Voulez-vous mettre un revetement ?");
+       int repv = Lire.i();
+        
+        while(repv != 0) {
+            
+        
+        System.out.println("Voulez-vous mettre un revetement ?");
+        repv = Lire.i();
+        
         System.out.println("type de revetement recherche :");
         String typeRevetement = Lire.S();
         DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
@@ -87,6 +96,7 @@ public class DevisBatiment {
         DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
         creerRevetement(idRevetementChoisi, listeRevetementMur);
         
+        }
          
                  
          Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre, listeRevetementMur);
@@ -96,9 +106,9 @@ public class DevisBatiment {
          rep=Lire.i();
          
          
-        
-         
      }
+         
+     
      
      
      
@@ -139,6 +149,8 @@ public class DevisBatiment {
              
          }
          
+         ic = 0;
+         
            
          Sol s = new Sol(id, listeCoinsol);
          listeSols.add(s);
@@ -153,6 +165,7 @@ public class DevisBatiment {
          
          
          
+         listeCoinsol.clear();
          
          System.out.println("Creation d'un Sol : 1=Oui et 0= Non");
          rep=Lire.i();
@@ -218,12 +231,8 @@ public class DevisBatiment {
      
      
      
-        System.out.println("type de revetement recherche :");
-        String typeRevetement = Lire.S();
-        DevisBatiment.rechercher_Revetement_Designation(typeRevetement);
-        System.out.println("Identifiant du revetement choisi : ");
-        String idRevetementChoisi = Lire.S();
-        DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
+        
+             
      
      
      
@@ -308,6 +317,7 @@ public class DevisBatiment {
                     double prixUnitaire = Double.parseDouble(tab[5]);
                     Revetement r = new Revetement(idrev, tab[1], pourmur, poursol, pourplafond, prixUnitaire);
                     listeRevetement.add(r);
+                    
                 }
             }
             revetement.close();
