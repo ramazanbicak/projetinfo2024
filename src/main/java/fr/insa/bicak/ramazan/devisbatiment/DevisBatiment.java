@@ -116,6 +116,7 @@ public class DevisBatiment {
          
          
          
+        
          
          
          
@@ -210,8 +211,6 @@ public class DevisBatiment {
          
          
          
-         
-         
          System.out.println("Voulez-vous un plafond : 1=Oui 0=Non");
          reppl = Lire.i();
          
@@ -236,10 +235,10 @@ public class DevisBatiment {
         listePlafonds.add(p);
          
        
-        System.out.println(listeSols.get(id-1).surface());
+        System.out.println(listePlafonds.get(id-1).surface());
          
         
-        System.out.println(listeSols.get(0).montantRevetement(listeSols.get(0).surface()));
+        System.out.println(listePlafonds.get(id-1).montantRevetement(listePlafonds.get(0).surface()));
         
         
         
@@ -308,7 +307,15 @@ public class DevisBatiment {
      
     
      
+     System.out.println("Identifiant du Plafond Recherche:");
+     int idRechp=Lire.i();
      
+     for (int i=0;i<listePlafonds.size();i++){
+         if(listePlafonds.get(i).idPlafond==idRechp)
+             listePlafonds.get(i).afficher();
+       
+        
+    }
      
      
      
