@@ -38,13 +38,49 @@ public class Plafond {
         return "Plafond{"+ "idNiveau=" + idPlafond + ", Coins=" + listeCoins + ", Liste des Revetements=" + listeRevetements + '}';
     }
     
-    public void surface(){
+   public double surface(){
         
+        double longueur;
+        double largueur;
+        longueur = 0;
+        largueur = 0;
+        
+        for (int i = 0; i<4; i++){
+            
+        if(listeCoins.get(0).cx == listeCoins.get(i).cx){
+            longueur = Math.abs(listeCoins.get(0).cy - listeCoins.get(i).cy);
+         
+        }
+        
+        if(listeCoins.get(0).cy == listeCoins.get(i).cy){
+            largueur = Math.abs(listeCoins.get(0).cx - listeCoins.get(i).cx);
+            
+            
+        }
         
         
         
     }
+    double surface;
+    surface = longueur * largueur;
     
+    return(surface);
+        
+    }
+    
+    
+    public double montantRevetement(double surface){
+             
+             double montant;
+             montant = 0;
+             for (int i=0; i<listeRevetements.size(); i++){
+                 
+             montant = surface*listeRevetements.get(i).prixUnitaire + montant;
+             
+             }
+             
+             return(montant);
+         }
     
     
     

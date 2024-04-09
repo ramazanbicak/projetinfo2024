@@ -11,13 +11,13 @@ public class Sol {
     
     int idSol;
     ArrayList<Coin> listeCoins= new ArrayList<>();
-    ArrayList<String> listeRevetements = new ArrayList<>();
+    ArrayList<Revetement> listeRevetements = new ArrayList<>();
     
     
-      public Sol(int idSol, ArrayList<Coin> listeCoins) {
+      public Sol(int idSol, ArrayList<Coin> listeCoins, ArrayList<Revetement> listeRevetements) {
         this.idSol = idSol;
         this.listeCoins = listeCoins;
-        //this.listeRevetements = listeRevetements;
+        this.listeRevetements = listeRevetements;
     }
     
     
@@ -62,6 +62,26 @@ public class Sol {
     return(surface);
         
     }
+    
+    
+    public double montantRevetement(double surface){
+             
+             double montant;
+             montant = 0;
+             for (int i=0; i<listeRevetements.size(); i++){
+                 
+             montant = surface*listeRevetements.get(i).prixUnitaire + montant;
+             
+             }
+             
+             return(montant);
+         }
+    
+    
+    
+    
+    
+    
     
     
     

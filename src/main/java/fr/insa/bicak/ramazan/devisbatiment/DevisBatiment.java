@@ -171,10 +171,6 @@ public class DevisBatiment {
          ic = 0;
          
            
-         Sol s = new Sol(id, listeCoinsol);
-         listeSols.add(s);
-         
-         System.out.println(listeSols.get(id-1).surface());
          
          
          //methode revetement
@@ -198,8 +194,15 @@ public class DevisBatiment {
         creerRevetement(idRevetementChoisi, listeRevetementSol);
         
         
+        Sol s = new Sol(id, listeCoinsol, listeRevetementSol);
+         listeSols.add(s);
+         
+         System.out.println(listeSols.get(id-1).surface());
+         
         
          
+         System.out.println(listeSols.get(0).montantRevetement(listeSols.get(0).surface()));
+                 
          
          
          
@@ -232,6 +235,14 @@ public class DevisBatiment {
         Plafond p = new Plafond(id, listeCoinsol, listeRevetementPlafond);
         listePlafonds.add(p);
          
+       
+        System.out.println(listeSols.get(id-1).surface());
+         
+        
+        System.out.println(listeSols.get(0).montantRevetement(listeSols.get(0).surface()));
+        
+        
+        
          }
          
          listeCoinsol.clear();
