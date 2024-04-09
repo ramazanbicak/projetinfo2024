@@ -107,7 +107,9 @@ public class DevisBatiment {
                  
          Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre, listeRevetementMur);
          listeMurs.add(m);
-         System.out.println(listeMurs.get(id-1).listeRevetements);
+         
+         
+         
          System.out.println(listeMurs.get(id-1).surface());
          
          
