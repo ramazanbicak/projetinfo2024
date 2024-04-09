@@ -14,6 +14,7 @@ public class DevisBatiment {
     
     public static double hauteurSousPlafond;
     private static Coin c;
+    public static Revetement r;
 
     public static void main(String[] args) {
         
@@ -93,7 +94,8 @@ public class DevisBatiment {
         String idRevetementChoisi = Lire.S();
         DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
         creerRevetement(idRevetementChoisi, listeRevetementMur);
-        
+       
+                
         
         System.out.println("Voulez-vous mettre un revetement ?");
         repv = Lire.i();
