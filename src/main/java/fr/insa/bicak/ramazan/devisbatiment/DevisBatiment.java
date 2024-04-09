@@ -110,9 +110,9 @@ public class DevisBatiment {
          
          
          
-         System.out.println(listeMurs.get(id-1).surface());
+         System.out.println(listeMurs.get(0).surface(hauteurSousPlafond));
          
-         
+         System.out.println(listeMurs.get(0).montantRevetement(listeMurs.get(0).surface(hauteurSousPlafond)));
          
          
          

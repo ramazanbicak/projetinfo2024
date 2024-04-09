@@ -45,19 +45,19 @@ public class Mur {
         return "Mur{"+ "idMur=" + idMur + ", coinDebut=" + coinDebut + ", coinFin=" + coinFin + '}';
          }
          
-         public double surface() {
+         public double surface(double hauteurSousPlafond) {
              
              double surface;
              surface = 0;
              
              if(coinDebut.cx == coinFin.cx){
                  
-             surface = Math.abs(coinDebut.cy - coinFin.cy)*DevisBatiment.hauteurSousPlafond;
+             surface = Math.abs(coinDebut.cy - coinFin.cy)*hauteurSousPlafond;
              
              }
              if(coinDebut.cy == coinFin.cy){
                  
-             surface = Math.abs(coinDebut.cx - coinFin.cx)*DevisBatiment.hauteurSousPlafond;
+             surface = Math.abs(coinDebut.cx - coinFin.cx)*hauteurSousPlafond;
              
              }
              
@@ -67,6 +67,22 @@ public class Mur {
                  
              
          }
+         
+         public double montantRevetement(double surface){
+             
+             double montant;
+             montant = 0;
+             for (int i=0; i<listeRevetements.size(); i++){
+                 
+             montant = surface*listeRevetements.get(i).prixUnitaire + montant;
+             
+             }
+             
+             return(montant);
+         }
+         
+         
+         
          }
          
          
