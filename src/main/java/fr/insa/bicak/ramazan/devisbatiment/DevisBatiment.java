@@ -23,6 +23,26 @@ public class DevisBatiment {
     
      
      
+     
+     System.out.println("Quelle est le numero du Batiment");
+     
+     System.out.println("Quelle est le type de Batiment : 1=Maison 2=Immeuble");
+     int typebat =Lire.i();
+     if (typebat == 1){
+         int idAppart = 1;
+     }
+     
+     
+     System.out.println("Le niveau est le niveau .....");
+     
+   
+     
+     
+     
+     
+     
+     
+     
      System.out.println("Quelle est la hauteur sous Plafond");
      double hauteurSousPlafond = Lire.d();
      
@@ -254,6 +274,21 @@ public class DevisBatiment {
          
      }
      
+     
+     
+     System.out.println("Voulez vous créer une pièce ?");
+     int repi=Lire.i();
+     if (repi == 1){
+         
+         
+         
+         
+         
+         
+         
+         
+         
+     }
      
      
      
