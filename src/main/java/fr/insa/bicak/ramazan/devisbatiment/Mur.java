@@ -21,6 +21,7 @@ public class Mur {
     ArrayList<Revetement> listeRevetements = new ArrayList<>();
     
     
+    
     public Mur(int idMur, Coin coinDebut,  Coin coinFin, int nbrePortes, int nbreFenetre, ArrayList<Revetement> listeRevetements) {
      this.idMur=idMur;
      this.coinDebut=coinDebut;

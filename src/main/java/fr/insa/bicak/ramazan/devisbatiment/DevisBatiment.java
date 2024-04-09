@@ -15,6 +15,7 @@ public class DevisBatiment {
     public static double hauteurSousPlafond;
     private static Coin c;
     public static Revetement r;
+    public static ArrayList<Revetement> listeRevtementMurs;
 
     public static void main(String[] args) {
         
@@ -94,7 +95,9 @@ public class DevisBatiment {
         String idRevetementChoisi = Lire.S();
         DevisBatiment.rechercher_Revetement_Identifiant(idRevetementChoisi);
         creerRevetement(idRevetementChoisi, listeRevetementMur);
-       
+        
+                
+        
                 
         
         System.out.println("Voulez-vous mettre un revetement ?");
@@ -104,7 +107,7 @@ public class DevisBatiment {
                  
          Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre, listeRevetementMur);
          listeMurs.add(m);
-         
+         System.out.println(listeMurs.get(id-1).listeRevetements);
          System.out.println(listeMurs.get(id-1).surface());
          
          

@@ -31,8 +31,16 @@ public class Revetement {
     
     void afficher() {
         
-        System.out.println("REV : "+this.idRevetement+" Nom : "+this.designation+" PourMur : "+this.pourMur+"PourSol : "+this.pourSol+"PourPlafond :"+this.pourPlafond+"Prix Unitaire : "+this.prixUnitaire);
+        System.out.println("Revetement : "+this.idRevetement+" Nom : "+this.designation+" PourMur : "+this.pourMur+"PourSol : "+this.pourSol+"PourPlafond :"+this.pourPlafond+"Prix Unitaire : "+this.prixUnitaire);
     
+    }
+    
+    public String toString() {
+        return "Revetement{"+"idRevetement="+ idRevetement + ", designation="+ designation + ", pourMur="+ pourMur + ", pourSol="+ pourSol + ", pourPlafond="+ pourPlafond + ", prixUnitaire=" + prixUnitaire+ '}';
+                
+         
+                
+                
     }
     
     
