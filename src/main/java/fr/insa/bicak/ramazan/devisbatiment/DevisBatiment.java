@@ -280,12 +280,38 @@ public class DevisBatiment {
      int repi=Lire.i();
      if (repi == 1){
          
+         System.out.println("A quelle apartement appartient cette pièce ?");
+         idApparetement = Lire.i();
+         System.out.println("Quelle est l'identifiant de la piece");
+         int idPi  = Lire.i();
          
          
+         System.out.println("Saisir le sol de la pièce");
+         int idsol = Lire.i();
          
+         System.out.println("Le mur a-t-il un plafond");
+         int reponseplafond = Lire.i();
          
+         if (reponseplafond == 1) {
+         System.out.println("Saisir le plafond de la pièce");
+         int idPlafond = Lire.i();
          
+         }
          
+         if (reponseplafond == 0) {
+             int idPlafond = 0;
+         }
+         
+         ArrayList<Mur> listeMursPiece;
+        listeMursPiece = new ArrayList<>();
+        
+         System.out.println("Saisir les murs de la pièce");
+         for (int i = 0; i<4; i++){
+         System.out.println("Saisir les murs de la pièce");
+         int idMurPlafond = Lire.i();
+         listeMursPiece.add(listeMurs.get(idMurPlafond - 1));
+         
+         }
          
          
      }
