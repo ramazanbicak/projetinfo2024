@@ -281,7 +281,7 @@ public class DevisBatiment {
      if (repi == 1){
          
          System.out.println("A quelle apartement appartient cette pièce ?");
-         idApparetement = Lire.i();
+         int idAppartement = Lire.i();
          System.out.println("Quelle est l'identifiant de la piece");
          int idPi  = Lire.i();
          
@@ -310,6 +310,10 @@ public class DevisBatiment {
          System.out.println("Saisir les murs de la pièce");
          int idMurPlafond = Lire.i();
          listeMursPiece.add(listeMurs.get(idMurPlafond - 1));
+         
+         
+         
+         
          
          }
          
