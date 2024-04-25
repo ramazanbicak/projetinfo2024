@@ -322,6 +322,34 @@ public class DevisBatiment {
          
          
          
+         //Appartement :
+         
+         ArrayList<Appartement> listeAppartements;
+         listeAppartements = new ArrayList<>();
+         ArrayList<Piece> listeAppartementsPiece;
+         listeAppartementsPiece = new ArrayList<>();
+         
+         System.out.println("Créer un Appartment ?");
+         
+         System.out.println("Quelle est l'identifiant de l'Appartement");
+         int idAppart = Lire.i();
+         System.out.println("Quelle est le niveau ?");
+         int idNiv = Lire.i();
+         
+         int idPieceApp = 0;
+         
+         while (idPieceApp != 0){
+             
+             System.out.println("Saisir l'identifiant de la pièce :");
+                     idPieceApp = Lire.i();
+             listeAppartementsPiece.add(rechPiece(idPieceApp, listePieces));
+             
+         }
+                 
+         Appartement a = new Appartement(idAppart, idNiv, listeAppartementsPiece);
+         listeAppartements.add(a);
+         
+         
          }
          
          
@@ -437,6 +465,19 @@ public class DevisBatiment {
         }
         return(Plafondrech);
     }
+    
+    public static Piece rechPiece(int idPiece, ArrayList <Piece> listePieces){
+        Piece Piecerech = listePieces.get(0);
+        for (int i=0;i<listePieces.size();i++){
+            if (listePieces.get(i).idPiece == idPiece)
+                Piecerech = listePieces.get(i);
+                
+        }
+        return(Piecerech);
+    }
+    
+    
+    
     
     public static void rechercher_Revetement_Designation(String revetementRech) {
             

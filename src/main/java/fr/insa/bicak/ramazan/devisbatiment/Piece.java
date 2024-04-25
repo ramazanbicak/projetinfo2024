@@ -48,7 +48,22 @@ public class Piece {
           double surface = DevisBatiment.rechSol(idSol, listeSols).surface() + DevisBatiment.rechPlafond(idPlafond, listePlafonds).surface() + surfMur;
                   
           return(surface);
-      }   
-         
+      }  
+      
+      public double montantRevetement(double surface, ArrayList<Sol> listeSols, ArrayList<Plafond> listePlafonds)
+      {
+          
+          double montmur = 0;
+          
+          for(int i=0;i<listeMursPiece.size();i++){
+              montmur = montmur + DevisBatiment.rechMur(i, listeMursPiece).surface(DevisBatiment.hauteurSousPlafond); 
+                      
+          }
+          
+          double mr = DevisBatiment.rechSol(idSol, listeSols).montantRevetement(DevisBatiment.rechSol(idSol, listeSols).surface()) + DevisBatiment.rechPlafond(idPlafond, listePlafonds).montantRevetement(DevisBatiment.rechPlafond(idPlafond, listePlafonds).surface()) + montmur;
+          
+          
+          return(mr);
+      }     
          
 }

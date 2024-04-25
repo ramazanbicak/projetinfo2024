@@ -4,6 +4,7 @@
  */
 package fr.insa.bicak.ramazan.devisbatiment;
 
+import java.util.ArrayList;
 /**
  *
  * @author abentsiou01
@@ -11,26 +12,34 @@ package fr.insa.bicak.ramazan.devisbatiment;
 public class Appartement  {
     
     
-    int idAppartement;
-     int NiveauAppartement;
-     
-    /*
-    public Appartement(int idAppartement, int NiveauAppartement) {
+   int idAppartement;
+   int NiveauAppartement;
+   ArrayList <Piece> listePieceAppart = new ArrayList<>();
+    
+    public Appartement(int idAppartement, int NiveauAppartement, ArrayList<Piece> listePieceAppart) {
      this.idAppartement=idAppartement;
      this.NiveauAppartement=NiveauAppartement;
+     this.listePieceAppart=listePieceAppart;
     }
-    */
+    
      
      void afficher() {
         
-        System.out.println("Identifiant :"+this.idAppartement+" NiveauAppartement :"+this.NiveauAppartement);
+        System.out.println("Identifiant :"+this.idAppartement+" NiveauAppartement :"+this.NiveauAppartement+"listePieceAppartement:"+this.listePieceAppart);
     }
      
      @Override
          public String toString() {
-        return "Piece{"+ "idMur=" + idAppartement + ", NiveauAppartement=" + NiveauAppartement + '}';
+        return "Piece{"+ "idMur=" + idAppartement + ", NiveauAppartement=" + NiveauAppartement +", listePieceAppart"+listePieceAppart+ '}';
          }
          
-     
+     public double surface(){
+         
+         double surface = 0;
+         for(int i=0;i<listePieceAppart.size();i++){
+             //surface = surface + DevisBatiment.rechPiece(i, listePieceAppart).surface(DevisBatiment.rechPiece(i, listePieceAppart));
+             DevisBatiment.re
+         }
+     }
     
 }
