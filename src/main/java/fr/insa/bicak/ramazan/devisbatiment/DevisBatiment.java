@@ -276,38 +276,44 @@ public class DevisBatiment {
      System.out.println("Voulez vous créer une pièce ?");
      int repi=Lire.i();
      if (repi == 1){
-         
+         int idAppartement = 0;
+         if (typebat == 2){
          System.out.println("A quelle apartement appartient cette pièce ?");
-         int idAppartement = Lire.i();
+            idAppartement = Lire.i();
+         }
+         
          System.out.println("Quelle est l'identifiant de la piece");
-         int idPi  = Lire.i();
+         int idPiece  = Lire.i();
          
          
-         System.out.println("Saisir le sol de la pièce");
+         System.out.println("Saisir l'identifiant du sol de la pièce");
          int idsol = Lire.i();
          
-         System.out.println("Le mur a-t-il un plafond");
+         System.out.println("La pièce a-t-il un plafond");
          int reponseplafond = Lire.i();
          
+         int idPlafond = 0;
          if (reponseplafond == 1) {
          System.out.println("Saisir le plafond de la pièce");
-         int idPlafond = Lire.i();
+            idPlafond = Lire.i();
          
          }
          
          if (reponseplafond == 0) {
-             int idPlafond = 0;
+            idPlafond = 0;
          }
          
-         ArrayList<Mur> listeMursPiece;
+        ArrayList<Mur> listeMursPiece;
         listeMursPiece = new ArrayList<>();
         
          System.out.println("Saisir les murs de la pièce");
          for (int i = 0; i<4; i++){
          System.out.println("Saisir les murs de la pièce");
          int idMurPlafond = Lire.i();
-         listeMursPiece.add(listeMurs.get(idMurPlafond - 1));
+         //listeMursPiece.add(listeMurs.get(idMurPlafond - 1));
+         listeMursPiece.add(rechMur(idMurPlafond, listeMurs));
          
+         Piece p = new Piece(idAppartement, idPiece, idsol, idPlafond, listeMursPiece);
          
          
          

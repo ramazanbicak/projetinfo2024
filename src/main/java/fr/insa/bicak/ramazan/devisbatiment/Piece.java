@@ -12,28 +12,38 @@ import java.util.ArrayList;
  */
 public class Piece {
     
+    int idAppartement;
     int idPiece;
-    int sol;
-    int plafond;
-    ArrayList<String> listePieces = new ArrayList<>();
+    int idSol;
+    int idPlafond;
+    ArrayList<Mur> listeMurs = new ArrayList<>();
      
-     /*
-      public Piece(int idPiece, int sol,  int plafond) {
+     
+      public Piece(int idAppartement, int idPiece, int idSol,  int idPlafond, ArrayList<Mur> listeMurs) {
+     this.idAppartement = idAppartement;
      this.idPiece=idPiece;
-     this.sol=sol;
-     this.plafond=plafond;
+     this.idSol=idSol;
+     this.idPlafond = idPlafond;
+     this.listeMurs=listeMurs;
      
       }
-     */
+     
      
      void afficher() {
         
-        System.out.println("Identifiant :"+this.idPiece+" Sol :"+this.sol+" Plafond :"+this.plafond);
+        System.out.println("Appartement :"+this.idAppartement+ "Identifiant :"+this.idPiece+" Sol :"+this.idSol+" Plafond :"+this.idPlafond+"listeMurs :"+this.listeMurs);
     }
      
      @Override
          public String toString() {
-        return "Piece{"+ "idPiece=" + idPiece + ", sol=" + sol + ", plafond=" + plafond + '}';
+        return "Piece{"+  "idAppartement"+idAppartement+"idPiece=" + idPiece + ", sol=" + idSol + ", plafond=" + idPlafond +  "listeMurs"+listeMurs+'}';
          }
     
+      public double surface(ArrayList<Sol> listeSols, ArrayList <Plafond> listePlafonds, ArrayList <Mur> listeMurs){
+          
+          double surface = DevisBatiment.rechSol(idSol, listeSols).surface() + DevisBatiment.rechPlafond(idPlafond, listePlafonds).surface() + 
+          return(surface);
+      }   
+         
+         
 }
