@@ -33,13 +33,28 @@ public class Appartement  {
         return "Piece{"+ "idMur=" + idAppartement + ", NiveauAppartement=" + NiveauAppartement +", listePieceAppart"+listePieceAppart+ '}';
          }
          
-     public double surface(){
+     public double surface(ArrayList<Sol> listeSols, ArrayList <Plafond> listePlafonds){
          
          double surface = 0;
          for(int i=0;i<listePieceAppart.size();i++){
-             //surface = surface + DevisBatiment.rechPiece(i, listePieceAppart).surface(DevisBatiment.rechPiece(i, listePieceAppart));
-             DevisBatiment.re
+            surface = surface + DevisBatiment.rechPiece(i, listePieceAppart).surface(listeSols, listePlafonds);
+             
+           
          }
+         return(surface);  
+         
+     }
+       
+public double montantRevetement(ArrayList<Sol> listeSols, ArrayList <Plafond> listePlafonds){
+         
+         double mr = 0;
+         for(int i=0;i<listePieceAppart.size();i++){
+            //mr = mr + DevisBatiment.rechPiece(i, listePieceAppart).montantRevetement.surface(listeSols, listePlafonds);
+             mr = mr + DevisBatiment.rechPiece(i, listePieceAppart).montantRevetement(DevisBatiment.rechPiece(i, listePieceAppart).surface(listeSols, listePlafonds),listeSols, listePlafonds);
+   
+         }
+         
+         return(mr); 
      }
     
 }
