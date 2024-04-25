@@ -309,9 +309,9 @@ public class DevisBatiment {
          System.out.println("Saisir les murs de la pièce");
          for (int i = 0; i<4; i++){
          System.out.println("Saisir les murs de la pièce");
-         int idMurPlafond = Lire.i();
+         int idMurPiece= Lire.i();
          //listeMursPiece.add(listeMurs.get(idMurPlafond - 1));
-         listeMursPiece.add(rechMur(idMurPlafond, listeMurs));
+         listeMursPiece.add(rechMur(idMurPiece, listeMurs));
          
          Piece p = new Piece(idAppartement, idPiece, idsol, idPlafond, listeMursPiece);
          

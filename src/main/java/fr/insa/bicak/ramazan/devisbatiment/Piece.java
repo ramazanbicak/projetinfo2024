@@ -16,32 +16,37 @@ public class Piece {
     int idPiece;
     int idSol;
     int idPlafond;
-    ArrayList<Mur> listeMurs = new ArrayList<>();
+    ArrayList<Mur> listeMursPiece = new ArrayList<>();
      
      
-      public Piece(int idAppartement, int idPiece, int idSol,  int idPlafond, ArrayList<Mur> listeMurs) {
+      public Piece(int idAppartement, int idPiece, int idSol,  int idPlafond, ArrayList<Mur> listeMursPiece) {
      this.idAppartement = idAppartement;
      this.idPiece=idPiece;
      this.idSol=idSol;
      this.idPlafond = idPlafond;
-     this.listeMurs=listeMurs;
+     this.listeMursPiece = listeMursPiece;
      
       }
      
      
      void afficher() {
         
-        System.out.println("Appartement :"+this.idAppartement+ "Identifiant :"+this.idPiece+" Sol :"+this.idSol+" Plafond :"+this.idPlafond+"listeMurs :"+this.listeMurs);
+        System.out.println("Appartement :"+this.idAppartement+ "Identifiant :"+this.idPiece+" Sol :"+this.idSol+" Plafond :"+this.idPlafond+"listeMurs :"+this.listeMursPiece);
     }
      
      @Override
          public String toString() {
-        return "Piece{"+  "idAppartement"+idAppartement+"idPiece=" + idPiece + ", sol=" + idSol + ", plafond=" + idPlafond +  "listeMurs"+listeMurs+'}';
+        return "Piece{"+  "idAppartement"+idAppartement+"idPiece=" + idPiece + ", sol=" + idSol + ", plafond=" + idPlafond +  "listeMurs"+listeMursPiece+'}';
          }
     
-      public double surface(ArrayList<Sol> listeSols, ArrayList <Plafond> listePlafonds, ArrayList <Mur> listeMurs){
-          
-          double surface = DevisBatiment.rechSol(idSol, listeSols).surface() + DevisBatiment.rechPlafond(idPlafond, listePlafonds).surface() + 
+      public double surface(ArrayList<Sol> listeSols, ArrayList <Plafond> listePlafonds){
+          double surfMur = 0;
+          for(int i=0;i<listeMursPiece.size();i++){
+              surfMur = surfMur + DevisBatiment.rechMur(i, listeMursPiece).surface(DevisBatiment.hauteurSousPlafond); 
+                      
+          }
+          double surface = DevisBatiment.rechSol(idSol, listeSols).surface() + DevisBatiment.rechPlafond(idPlafond, listePlafonds).surface() + surfMur;
+                  
           return(surface);
       }   
          
