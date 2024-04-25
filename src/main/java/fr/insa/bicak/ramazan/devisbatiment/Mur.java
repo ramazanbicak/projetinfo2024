@@ -60,9 +60,10 @@ public class Mur {
              surface = Math.abs(coinDebut.cx - coinFin.cx)*hauteurSousPlafond;
              
              }
+            
              
-            
-            
+            surface = surface - nbrePortes*Porte.surface();
+            surface = surface - nbreFenetre*Fenetre.surface();
             return (surface);
                  
              
@@ -77,6 +78,8 @@ public class Mur {
              montant = surface*listeRevetements.get(i).prixUnitaire + montant;
              
              }
+             
+             
              
              return(montant);
          }

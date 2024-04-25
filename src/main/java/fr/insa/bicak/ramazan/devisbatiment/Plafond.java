@@ -14,13 +14,14 @@ public class Plafond {
     int idPlafond;
     ArrayList<Coin> listeCoins= new ArrayList<>();
     ArrayList<Revetement> listeRevetements = new ArrayList<>();
+    int nbreTremis;
     
     
     
-    
-    public Plafond(int idPlafond, ArrayList<Coin> listeCoins, ArrayList<Revetement> listeRevetements ) {
+    public Plafond(int idPlafond, ArrayList<Coin> listeCoins, int nbreTremis, ArrayList<Revetement> listeRevetements ) {
         this.idPlafond = idPlafond;
         this.listeCoins = listeCoins;
+        this.nbreTremis = nbreTremis;
         this.listeRevetements = listeRevetements;
     }
     
@@ -29,13 +30,13 @@ public class Plafond {
     
     void afficher() {
         
-        System.out.println("Plafond :"+this.idPlafond+" Coins :"+this.listeCoins+" Revetements : "+this.listeRevetements);
+        System.out.println("Plafond :"+this.idPlafond+" Coins :"+this.listeCoins+"nbreTremis :"+this.nbreTremis+ "Revetements : "+this.listeRevetements);
     
     }
     
     @Override
     public String toString() {
-        return "Plafond{"+ "idNiveau=" + idPlafond + ", Coins=" + listeCoins + ", Liste des Revetements=" + listeRevetements + '}';
+        return "Plafond{"+ "idNiveau=" + idPlafond + ", Coins=" + listeCoins +", nbreTremis="+nbreTremis+ ", Liste des Revetements=" + listeRevetements + '}';
     }
     
    public double surface(){
@@ -63,6 +64,7 @@ public class Plafond {
     }
     double surface;
     surface = longueur * largueur;
+    surface = surface - nbreTremis*Tremie.surface();
     
     return(surface);
         

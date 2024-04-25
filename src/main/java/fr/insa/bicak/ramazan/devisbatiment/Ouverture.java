@@ -16,6 +16,16 @@ public class Ouverture {
     double dimX;
     double dimY;
     
+    public double surface(double dimX, double dimY){
+        
+        double sur = dimX*dimY;
+        
+        return(sur);
+        
+                
+        
+    }
+    
     void afficher() {
         
         System.out.println("Identifiant :"+this.idOuverture+" DimX"+ this.dimX+" Dim Y :"+this.dimY);

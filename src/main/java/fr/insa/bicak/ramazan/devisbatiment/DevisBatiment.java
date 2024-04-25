@@ -20,11 +20,11 @@ public class DevisBatiment {
     public static void main(String[] args) {
         
      int niv;
-    
+    int idNiveau = 0;
      
      
      
-     System.out.println("Quelle est le numero du Batiment");
+     
      
      System.out.println("Quelle est le type de Batiment : 1=Maison 2=Immeuble");
      int typebat =Lire.i();
@@ -33,15 +33,9 @@ public class DevisBatiment {
      }
      
      
-     System.out.println("Le niveau est le niveau .....");
+     System.out.println("Niveau"+idNiveau);
      
    
-     
-     
-     
-     
-     
-     
      
      System.out.println("Quelle est la hauteur sous Plafond");
      double hauteurSousPlafond = Lire.d();
@@ -125,7 +119,7 @@ public class DevisBatiment {
         }
          
                  
-         Mur m = new Mur(id, listeCoins.get(idcd - 1), listeCoins.get(idcf - 1), nbporte, nbfenetre, listeRevetementMur);
+         Mur m = new Mur(id, rechCoin(idcd, listeCoins), rechCoin(idcf, listeCoins), nbporte, nbfenetre, listeRevetementMur);
          listeMurs.add(m);
          
          
@@ -184,7 +178,7 @@ public class DevisBatiment {
              
              System.out.println("saisir coin :");
              idcoin = Lire.i();
-             listeCoinsol.add(listeCoins.get(idcoin - 1));
+             listeCoinsol.add(rechCoin(idcoin, listeCoins));
              ic=ic+1;
              
          }
@@ -218,7 +212,8 @@ public class DevisBatiment {
         Sol s = new Sol(id, listeCoinsol, listeRevetementSol);
          listeSols.add(s);
          
-         System.out.println(listeSols.get(id-1).surface());
+         //System.out.println(listeSols.get(id-1).surface());
+         System.out.println(rechSol(id, listeSols).surface());
          
         
          
@@ -237,7 +232,9 @@ public class DevisBatiment {
          if (reppl == 1){
              
              
-         
+     System.out.println("Quelle est le nombre de tremis du plafond ?");
+     int nbtremis = Lire.i();
+     
      ArrayList<Revetement> listeRevetementPlafond;
      listeRevetementPlafond = new ArrayList<>();
      
@@ -251,15 +248,15 @@ public class DevisBatiment {
         
         
         
-        Plafond p = new Plafond(id, listeCoinsol, listeRevetementPlafond);
+        Plafond p = new Plafond(id, listeCoinsol, nbtremis, listeRevetementPlafond);
         listePlafonds.add(p);
          
        
-        System.out.println(listePlafonds.get(id-1).surface());
-         
+        //System.out.println(listePlafonds.get(id-1).surface());
+         System.out.println(rechPlafond(id, listePlafonds).surface());
         
-        System.out.println(listePlafonds.get(id-1).montantRevetement(listePlafonds.get(0).surface()));
-        
+        //System.out.println(listePlafonds.get(id-1).montantRevetement(listePlafonds.get(0).surface()));
+        System.out.println(rechPlafond(id, listePlafonds).montantRevetement(listePlafonds.get(0).surface()));
         
         
          }
@@ -392,6 +389,44 @@ public class DevisBatiment {
         
     }  
     
+    public static Coin rechCoin(int idCoin, ArrayList <Coin> listeCoins){
+        Coin Coinrech = listeCoins.get(0);
+        for (int i=0;i<listeCoins.size();i++){
+            if(listeCoins.get(i).idCoin == idCoin)
+                Coinrech = listeCoins.get(i);
+                
+        }
+        return(Coinrech);
+    }
+    
+    public static Mur rechMur(int idMur, ArrayList <Mur> listeMurs){
+        Mur Murrech = listeMurs.get(0);
+        for (int i=0;i<listeMurs.size();i++){
+            if(listeMurs.get(i).idMur == idMur)
+                Murrech = listeMurs.get(i);
+                
+        }
+        return(Murrech);
+    }
+    
+    public static Sol rechSol(int idSol, ArrayList <Sol> listeSols){
+        Sol Solrech = listeSols.get(0);
+        for (int i=0;i<listeSols.size();i++){
+            if(listeSols.get(i).idSol == idSol)
+                Solrech = listeSols.get(i);
+                
+        }
+        return(Solrech);
+    }
+    public static Plafond rechPlafond(int idPlafond, ArrayList <Plafond> listePlafonds){
+        Plafond Plafondrech = listePlafonds.get(0);
+        for (int i=0;i<listePlafonds.size();i++){
+            if(listePlafonds.get(i).idPlafond == idPlafond)
+                Plafondrech = listePlafonds.get(i);
+                
+        }
+        return(Plafondrech);
+    }
     
     public static void rechercher_Revetement_Designation(String revetementRech) {
             

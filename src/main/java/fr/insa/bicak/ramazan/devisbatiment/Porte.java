@@ -10,4 +10,28 @@ package fr.insa.bicak.ramazan.devisbatiment;
  */
 public class Porte extends Ouverture{
     
+    
+    public Porte(int idOuverture, double dimX, double dimY) {
+        this.idOuverture = idOuverture; // Initialise l'identifiant hérité
+        this.dimX = dimX; // Initialise dimX hérité
+        this.dimY = dimY; // Initialise dimY hérité
+        
+    }
+    
+    int idOuverture;
+    double dimX; 
+    double dimY;
+    
+    public static double surface(){
+        
+        double dimX = 0.9;
+        double dimY = 2.10;
+        double sur = dimX*dimY;
+        
+        return(sur);
+        
+                
+        
+    }
+    
 }
