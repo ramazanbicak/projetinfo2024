@@ -275,6 +275,7 @@ public class DevisBatiment {
      
      System.out.println("Voulez vous créer une pièce ?");
      int repi=Lire.i();
+     
      if (repi == 1){
          int idAppartement = 0;
          if (typebat == 2){
@@ -313,8 +314,11 @@ public class DevisBatiment {
          //listeMursPiece.add(listeMurs.get(idMurPlafond - 1));
          listeMursPiece.add(rechMur(idMurPiece, listeMurs));
          
-         Piece p = new Piece(idAppartement, idPiece, idsol, idPlafond, listeMursPiece);
+         ArrayList<Piece> listePieces;
+         listePieces = new ArrayList<>();
          
+         Piece p = new Piece(idAppartement, idPiece, idsol, idPlafond, listeMursPiece);
+         listePieces.add(p);
          
          
          
